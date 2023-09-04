@@ -37,6 +37,14 @@ const Contact = () => {
           >
             <h1 className='ext-link'>resume</h1>
           </a>
+          <a
+            className='projects-item'
+            target='_blank'
+            rel='noreferrer'
+            href='https://github.com/Cody-Derbyshire'
+          >
+            <h1 className='ext-link'>github</h1>
+          </a>
           <h1 className='menu-item' onClick={() => navigate(-1)}>
             back
           </h1>
