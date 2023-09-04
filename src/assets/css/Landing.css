@@ -1,0 +1,96 @@
+.main {
+  height: 100vh;
+  padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+.title-div {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 5rem 0 0;
+  align-items: center;
+}
+
+.name {
+  font-size: 3rem;
+  font-family: bergen-bold;
+  text-align: center;
+}
+
+.change-div {
+  display: flex;
+  font-size: 1rem;
+  overflow: hidden;
+  background-color: #ece9eb;
+  color: #0e080b;
+  width: fit-content;
+  border-radius: 2rem;
+  padding: 0 1rem;
+}
+
+.role-text,
+.skills-text {
+  font-family: bergen-bold;
+}
+
+.marquee-text {
+  font-size: 5rem;
+
+  font-family: bergen;
+  color: #424242;
+}
+
+.menu-link {
+  width: fit-content;
+  padding: 0 1rem;
+  font-size: 2rem;
+  margin-left: -1rem;
+  background: right / 0% 100% no-repeat linear-gradient(#ece9eb, #ece9eb);
+  transition: background-size 500ms;
+}
+
+.menu-link:hover,
+.menu-link:focus {
+  background: left / 100% 100% no-repeat linear-gradient(#ece9eb, #ece9eb);
+  color: #0e080b;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 35rem) {
+  .title-div {
+    margin: 10rem 0 0;
+  }
+  .change-div {
+    font-size: 2rem;
+  }
+  .name {
+    font-size: 5rem;
+  }
+}
+
+.bg-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.25;
+  font-size: 5rem;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  z-index: -10;
+  overflow: hidden;
+}

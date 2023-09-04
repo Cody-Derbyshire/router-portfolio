@@ -1,0 +1,132 @@
+{
+  "graphics": [
+    {
+      "src": "https://i.ibb.co/JH0kSKS/layouts-scale1.webp",
+      "width": 1000,
+      "height": 1000
+    },
+    {
+      "src": "https://i.ibb.co/W0HTQkh/layouts-scale2.webp",
+      "width": 1000,
+      "height": 1000
+    },
+    {
+      "src": "https://i.ibb.co/mDstTxv/layouts-personalbrand.webp",
+      "width": 1000,
+      "height": 1000
+    },
+    {
+      "src": "https://i.ibb.co/NY5LsXy/layouts-eptgraphics.webp",
+      "width": 1000,
+      "height": 1000
+    },
+    {
+      "src": "https://i.ibb.co/LkPRJsS/layouts-eva.webp",
+      "width": 1000,
+      "height": 1000
+    },
+    {
+      "src": "https://i.ibb.co/sgzJLYz/layouts-fwd.webp",
+      "width": 1000,
+      "height": 1000
+    },
+    {
+      "src": "https://i.ibb.co/KKPQ6k7/layouts-grace.webp",
+      "width": 1000,
+      "height": 1000
+    },
+    {
+      "src": "https://i.ibb.co/L6KXd3W/layouts-wedding.webp",
+      "width": 1000,
+      "height": 1000
+    },
+    {
+      "src": "https://i.ibb.co/ccCP6Z4/layouts-manifest.webp",
+      "width": 1000,
+      "height": 1000
+    }
+  ],
+  "furniture": [
+    {
+      "src": "https://i.ibb.co/6Wt7rYH/layouts-armchair.webp",
+      "width": 1000,
+      "height": 1000
+    },
+    {
+      "src": "https://i.ibb.co/TwZHRnF/layouts-bedsidetable.webp",
+      "width": 1000,
+      "height": 1000
+    },
+    {
+      "src": "https://i.ibb.co/Fs0tb96/layouts-couch.webp",
+      "width": 1000,
+      "height": 1000
+    },
+    {
+      "src": "https://i.ibb.co/ZmSK9yB/layouts-plamp.webp",
+      "width": 1000,
+      "height": 1000
+    },
+    {
+      "src": "https://i.ibb.co/829k3Rh/layouts-recordstand.webp",
+      "width": 1000,
+      "height": 1000
+    }
+  ],
+  "ThreeD": [
+    {
+      "src": "https://i.ibb.co/3Cm2J5c/layouts-dumbpad.webp",
+      "width": 1000,
+      "height": 1000
+    },
+    {
+      "src": "https://i.ibb.co/Jvzvjws/layouts-dumbpad1.webp",
+      "width": 1000,
+      "height": 1000
+    },
+    {
+      "src": "https://i.ibb.co/MhVcmtS/layouts-walker1.webp",
+      "width": 1000,
+      "height": 1000
+    },
+    {
+      "src": "https://i.ibb.co/FJcxxkJ/layouts-walker2.webp",
+      "width": 1000,
+      "height": 1000
+    }
+  ],
+  "motion": [
+    {
+      "src": "https://i.ibb.co/cFkvzFW/UI-GIF-1.gif",
+      "width": 1000,
+      "height": 1000
+    },
+    {
+      "src": "https://i.ibb.co/0mBSZcS/stylized-gif-SHARPER.gif",
+      "width": 1000,
+      "height": 1000
+    },
+    {
+      "src": "https://i.ibb.co/XJLcrZW/walker2-v1.gif",
+      "width": 1000,
+      "height": 1000
+    },
+    {
+      "src": "https://i.ibb.co/47SDD5t/meta-gif-off.gif",
+      "width": 1000,
+      "height": 1000
+    }
+  ],
+  "costume": [
+    {
+      "src": "https://i.ibb.co/R3vmSgg/layouts-recycle.webp",
+      "width": 1000,
+      "height": 1000
+    },
+    {
+      "src": "https://i.ibb.co/cDJq7LK/layouts-eptcostume.webp",
+      "width": 1000,
+      "height": 1000
+    }
+  ]
+}

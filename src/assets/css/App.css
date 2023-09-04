@@ -1,0 +1,31 @@
+@font-face {
+  font-family: space-mono;
+  src: url(../fonts/space-mono/SpaceMono-Regular.ttf);
+  font-weight: normal;
+}
+@font-face {
+  font-family: space-mono-bold;
+  src: url(../fonts/space-mono/SpaceMono-Bold.ttf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: bergen;
+  src: url(../fonts/bergen/BergenSans.ttf);
+  font-weight: normal;
+}
+@font-face {
+  font-family: bergen-bold;
+  src: url(../fonts/bergen/BergenSans-Bold.ttf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: korium;
+  src: url(../fonts/korium/T1Korium.ttf);
+  font-weight: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

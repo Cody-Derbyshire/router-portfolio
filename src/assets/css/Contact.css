@@ -1,0 +1,35 @@
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.me-picture {
+  width: 100%;
+}
+
+.contact-link {
+  font-size: 1rem;
+
+  font-size: 1rem;
+}
+
+.contact-link-wrapper {
+  background-color: #ece9eb;
+  color: #0e080b;
+  width: 100%;
+}
+
+@media screen and (min-width: 35rem) {
+  .me-picture {
+    width: 50vw;
+  }
+
+  .contact-link-wrapper {
+    width: 50vw;
+    font-size: 1.5rem;
+  }
+}

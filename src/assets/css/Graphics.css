@@ -1,0 +1,35 @@
+.graphics-wrapper {
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.page-title {
+  border-top: 0.05rem solid #ece9eb;
+  background: left / 0% 100% no-repeat linear-gradient(#ece9eb, #ece9eb);
+  transition: background-size 500ms;
+  padding: 0.25rem 1rem;
+}
+
+.graphics-gallery {
+  width: 100vw;
+}
+
+/* .graphics-container {
+  display: flex;
+}
+
+.graphics-img {
+  width: 90vw;
+} */
+
+/* @media screen and (min-width: 35rem) {
+  .graphics-gallery {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .graphics-img {
+    width: 100%;
+  }
+} */

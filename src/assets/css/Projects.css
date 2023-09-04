@@ -1,0 +1,40 @@
+.image-container {
+  margin: 0 1rem;
+}
+
+.scroll-img {
+  width: 15rem;
+  height: auto;
+  image-rendering: pixelated;
+}
+
+.projects-wrapper {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.projects-item {
+  border-top: 0.05rem solid #ece9eb;
+  background: left / 0% 100% no-repeat linear-gradient(#ece9eb, #ece9eb);
+  transition: background-size 500ms;
+  padding: 0.25rem 1rem;
+}
+
+.projects-item:hover,
+.projects-item:focus {
+  background: right / 100% 100% no-repeat linear-gradient(#ece9eb, #ece9eb);
+  color: #0e080b;
+  cursor: pointer;
+  display: flex;
+  justify-content: end;
+}
+
+@media screen and (min-width: 35rem) {
+  .scroll-wrapper {
+    margin-top: 5rem;
+  }
+}
+
+.ext-link:after {
+  content: ' ↗';
+}

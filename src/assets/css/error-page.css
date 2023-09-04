@@ -1,0 +1,29 @@
+.error-page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.error-message {
+  font-size: 2rem;
+}
+
+.back-link {
+  width: fit-content;
+  padding: 0 1rem;
+  font-size: 1rem;
+  margin-left: -1rem;
+  background: right / 0% 100% no-repeat linear-gradient(#ece9eb, #ece9eb);
+  transition: background-size 500ms;
+}
+
+.back-link:hover,
+.back-link:focus {
+  background: left / 100% 100% no-repeat linear-gradient(#ece9eb, #ece9eb);
+  color: #0e080b;
+  cursor: pointer;
+}
