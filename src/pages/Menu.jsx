@@ -33,6 +33,9 @@ const Menu = () => {
             <Link className='menu-item' to='/contact'>
               <h1>contact</h1>
             </Link>
+            <Link className='menu-item' to='/gallery'>
+              <h1>gallery</h1>
+            </Link>
             <Link className='menu-item' to='/'>
               <h1 id='menu-close'>close</h1>
             </Link>

@@ -10,6 +10,7 @@ import Costume from './pages/Costume';
 import Contact from './pages/Contact';
 import Error from './pages/Error';
 import './assets/css/App.css';
+import Gallery from './pages/Gallery';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path='/motion' element={<Motion />} />
           <Route path='/costume' element={<Costume />} />
           <Route path='/contact' element={<Contact />} />
+          <Route path='/gallery' element={<Gallery />} />
           <Route path='*' element={<Error />} />
         </Routes>
       </BrowserRouter>
