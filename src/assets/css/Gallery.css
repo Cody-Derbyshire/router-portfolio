@@ -1,0 +1,21 @@
+.gallery-wrapper {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.float {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  text-align: right;
+  padding: 1rem 3rem;
+}
+
+.back:hover {
+  cursor: pointer;
+}
+
+.back:last-child:hover::before {
+  content: '← ';
+  font-size: 2rem;
+}
