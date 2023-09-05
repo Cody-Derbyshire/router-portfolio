@@ -14,7 +14,8 @@ import {
 } from '@react-three/drei';
 
 import lens from '../assets/images/tFO_-lens-transformed.glb';
-import Marquee from 'react-fast-marquee';
+import bergenBold from '../assets/fonts/bergen/BergenSans-Bold.ttf';
+import images from '../assets/images.json';
 
 export default function LensAll() {
   return (
@@ -27,7 +28,7 @@ export default function LensAll() {
           <Lens>
             <Scroll>
               <Typography />
-              {/* <Images /> */}
+              <Images />
             </Scroll>
             <Preload />
           </Lens>
@@ -73,45 +74,107 @@ function Images() {
   const group = useRef();
   const data = useScroll();
   const { width, height } = useThree((state) => state.viewport);
-  useFrame(() => {
-    group.current.children[0].material.zoom = 1 + data.range(0, 1 / 3) / 3;
-    group.current.children[1].material.zoom = 1 + data.range(0, 1 / 3) / 3;
-    group.current.children[2].material.zoom =
-      1 + data.range(1.15 / 3, 1 / 3) / 2;
-    group.current.children[3].material.zoom =
-      1 + data.range(1.25 / 3, 1 / 3) / 2;
-    group.current.children[4].material.zoom =
-      1 + data.range(1.35 / 3, 1 / 3) / 2;
-    group.current.children[5].material.grayscale =
-      1 - data.range(1.6 / 3, 1 / 3);
-    group.current.children[6].material.zoom =
-      1 + (1 - data.range(2 / 3, 1 / 3)) / 3;
-  });
+  const depth = width < 5 ? -10 : 0;
+  function heightVar(num, width) {
+    if (width < 5) {
+      return num + 1;
+    } else {
+      return num;
+    }
+  }
+
   return (
     <group ref={group}>
-      <Image
-        position={[-2, 0, 0]}
-        scale={[4, height, 1]}
-        url='../assets/images/ME.jpg'
-      />
-      <Image position={[2, 0, 3]} scale={3} url='/img6.jpg' />
-      <Image
-        position={[-2.05, -height, 6]}
-        scale={[1, 3, 1]}
-        url='/trip2.jpg'
-      />
-      <Image position={[-0.6, -height, 9]} scale={[1, 2, 1]} url='/img8.jpg' />
-      <Image position={[0.75, -height, 10.5]} scale={1.5} url='/trip4.jpg' />
-      <Image
-        position={[0, -height * 1.5, 7.5]}
-        scale={[1.5, 3, 1]}
-        url='/img3.jpg'
-      />
-      <Image
-        position={[0, -height * 2 - height / 4, 0]}
-        scale={[width, height / 1.1, 1]}
-        url='/img7.jpg'
-      />
+      {images.furniture.map((image, index) => (
+        <Image
+          position={[index * 2.5 - 5.5, heightVar(1.5, width), depth]}
+          scale={[2, 2, 1]}
+          url={image.src}
+          transparent
+          opacity={0.8}
+        />
+      ))}
+      {images.graphics.map((image, index) => (
+        <Image
+          position={[index * 2.5 - 8, heightVar(-1, width), depth]}
+          scale={[2, 2, 1]}
+          url={image.src}
+          transparent
+          opacity={0.8}
+        />
+      ))}
+      {images.ThreeD.map((image, index) => (
+        <Image
+          position={[index * 2.5 - 5.5, heightVar(-3.5, width), depth]}
+          scale={[2, 2, 1]}
+          url={image.src}
+          transparent
+          opacity={0.8}
+        />
+      ))}
+      {images.furniture.map((image, index) => (
+        <Image
+          position={[index * 2.5 + 4.5, heightVar(-3.5, width), depth]}
+          scale={[2, 2, 1]}
+          url={image.src}
+          transparent
+          opacity={0.8}
+        />
+      ))}
+      {images.costume.map((image, index) => (
+        <Image
+          position={[index * 2.5 - 3, heightVar(-6, width), depth]}
+          scale={[2, 2, 1]}
+          url={image.src}
+          transparent
+          opacity={0.8}
+        />
+      ))}
+      {images.costume.map((image, index) => (
+        <Image
+          position={[index * 2.5 + 2, heightVar(-6, width), depth]}
+          scale={[2, 2, 1]}
+          url={image.src}
+          transparent
+          opacity={0.8}
+        />
+      ))}
+      {images.graphics.map((image, index) => (
+        <Image
+          position={[index * 2.5 - 3, heightVar(-8.5, width), depth]}
+          scale={[2, 2, 1]}
+          url={image.src}
+          transparent
+          opacity={0.8}
+        />
+      ))}
+      {images.graphics.map((image, index) => (
+        <Image
+          position={[index * 2.5 - 15.5, heightVar(-11, width), depth]}
+          scale={[2, 2, 1]}
+          url={image.src}
+          transparent
+          opacity={0.8}
+        />
+      ))}
+      {images.furniture.map((image, index) => (
+        <Image
+          position={[index * 2.5 - 3, heightVar(-13.5, width), depth]}
+          scale={[2, 2, 1]}
+          url={image.src}
+          transparent
+          opacity={0.8}
+        />
+      ))}
+      {images.graphics.map((image, index) => (
+        <Image
+          position={[index * 2.5 - 25.5, heightVar(-16, width), depth]}
+          scale={[2, 2, 1]}
+          url={image.src}
+          transparent
+          opacity={0.8}
+        />
+      ))}
     </group>
   );
 }
@@ -119,29 +182,35 @@ function Images() {
 function Typography() {
   const state = useThree();
   const { width, height } = state.viewport.getCurrentViewport(
-    state.cameta,
+    state.camera,
     [0, 0, 12]
   );
   const shared = {
-    font: '/Inter-Regular.woff',
+    font: bergenBold,
     letterSpacing: -0.1,
-    color: 'black',
+    color: '#0e080b',
   };
   return (
     <>
       <Text
-        children='to'
-        anchorX='left'
-        position={[-width / 2.5, -height / 2.8, 12]}
+        children='some'
+        anchorX='center'
+        position={[-width / 8, -height / 2.8, 6]}
         {...shared}
       />
       <Text
-        children='be'
-        anchorX='right'
-        position={[width / 2.5, -height * 2.8, 12]}
+        children='of'
+        anchorX='center'
+        position={[-width / 10, -height / 0.5, 6]}
         {...shared}
       />
-      <Text children='home' position={[0, -height * 4.644, 12]} {...shared} />
+      <Text
+        children='my'
+        anchorX='right'
+        position={[width / 2.5, -height * 3.5, 8]}
+        {...shared}
+      />
+      <Text children='work' position={[0, -height * 4.644, 6]} {...shared} />
     </>
   );
 }
