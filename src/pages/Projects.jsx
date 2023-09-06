@@ -33,10 +33,22 @@ const Projects = () => {
   return (
     <>
       <Transitions>
-        <div className='projects-wrapper'>
-          <div id='projects' className='menu-container'>
+        <div
+          className='projects-wrapper'
+          style={{ backgroundColor: '#ece9eb' }}
+        >
+          <div className='float float-no-invert'>
+            <h1
+              style={{ color: '#0e080b', border: 'none' }}
+              className='back'
+              onClick={() => navigate(-1)}
+            >
+              back
+            </h1>
+          </div>
+          <div className='float center-float'>
             <a
-              className='projects-item'
+              className='contact-item'
               target='_blank'
               rel='noreferrer'
               href='https://poke-gen.onrender.com/'
@@ -44,7 +56,7 @@ const Projects = () => {
               <h1 className='ext-link'>poke-api</h1>
             </a>
             <a
-              className='projects-item'
+              className='contact-item'
               target='_blank'
               rel='noreferrer'
               href='https://build-a-chatbot-wwl8.onrender.com/'
@@ -52,16 +64,13 @@ const Projects = () => {
               <h1 className='ext-link'>chatbot</h1>
             </a>
             <a
-              className='projects-item'
+              className='contact-item'
               target='_blank'
               rel='noreferrer'
               href='https://react-online-shop.onrender.com/'
             >
               <h1 className='ext-link'>font-face</h1>
             </a>
-            <h1 className='menu-item' onClick={() => navigate(-1)}>
-              back
-            </h1>
           </div>
           <div className='scroll-wrapper'>
             <Marquee autoFill='true' pauseOnHover='true'>

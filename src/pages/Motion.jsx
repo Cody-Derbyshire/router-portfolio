@@ -3,9 +3,19 @@ import * as React from 'react';
 import '../assets/css/Graphics.css';
 import images from '../assets/images.json';
 import Transitions from '../components/Transitions';
-import Lightbox from 'yet-another-react-lightbox';
-import Inline from 'yet-another-react-lightbox/plugins/inline';
-import 'yet-another-react-lightbox/styles.css';
+
+import * as THREE from 'three';
+import { Suspense, useRef } from 'react';
+import { Canvas, useFrame, useThree } from '@react-three/fiber';
+import {
+  Preload,
+  Image as ImageImpl,
+  ScrollControls,
+  Scroll,
+  useScroll,
+  Html,
+  useProgress,
+} from '@react-three/drei';
 
 const Motion = () => {
   const navigate = useNavigate();
@@ -14,31 +24,158 @@ const Motion = () => {
     <>
       <Transitions>
         <div className='graphics-wrapper'>
-          <div id='projects' className='menu-container'>
-            <h1 className='page-title'>furniture</h1>
+          <div className='float'>
+            <h1 className=''>motion</h1>
 
-            <h1 className='menu-item' onClick={() => navigate(-1)}>
+            <h1 className='back' onClick={() => navigate(-1)}>
               back
             </h1>
           </div>
           <div className='graphics-gallery'>
-            <Lightbox
-              plugins={[Inline]}
-              inline={{
-                style: {
-                  width: '100%',
-                  /* maxWidth: '90vw', */
-                  aspectRatio: '1 / 1',
-                  imageFit: 'cover',
-                },
-              }}
-              slides={images.motion}
-            />
+            <Canvas
+              style={{ height: '100vh' }}
+              gl={{ antialias: false }}
+              dpr={[1, 1.5]}
+            >
+              <Loader />
+              <Suspense fallback={null}>
+                <ScrollControls
+                  damping={0.1}
+                  pages={2.5}
+                  distance={1}
+                  maxSpeed={1}
+                >
+                  <Scroll>
+                    <Pages />
+                  </Scroll>
+                </ScrollControls>
+                <Preload />
+              </Suspense>
+            </Canvas>
           </div>
         </div>
       </Transitions>
     </>
   );
 };
+
+function Image(props) {
+  const ref = useRef();
+  const group = useRef();
+  const data = useScroll();
+  useFrame((state, delta) => {
+    group.current.position.z = THREE.MathUtils.damp(
+      group.current.position.z,
+      Math.max(0, data.delta * 50),
+      4,
+      delta
+    );
+  });
+  return (
+    <group ref={group}>
+      <ImageImpl ref={ref} {...props} />
+    </group>
+  );
+}
+
+function Page({ m = 0.4, urls, ...props }) {
+  const { width, height } = useThree((state) => state.viewport);
+  const h = height < 10 ? 1.5 / 3 : 1 / 3;
+  const w = width < 10 ? 1.5 / 3 : 1 / 3;
+  return (
+    <group {...props}>
+      {width > 6 && (
+        <Image
+          position={[-width * w, 0, 0]}
+          scale={[height * h - m * 2, height * h - m * 2, 1]}
+          url={urls[0]}
+        />
+      )}
+      <Image
+        position={[0, 0, 0.01]}
+        scale={[height * h - m * 2, height * h - m * 2, 1]}
+        url={urls[1]}
+      />
+      {width > 6 && (
+        <Image
+          position={[width * w, 0, 0]}
+          scale={[height * h - m * 2, height * h - m * 2, 1]}
+          url={urls[2]}
+        />
+      )}
+    </group>
+  );
+}
+
+function Pages() {
+  const { width, height } = useThree((state) => state.viewport);
+  console.log(width);
+  return (
+    <>
+      <Page
+        position={[0, height * 0.5, 0]}
+        urls={[
+          images.motion[0].src,
+          images.motion[0].src,
+          images.motion[0].src,
+        ]}
+      />
+
+      <Page
+        position={[0, -height * 0, 0]}
+        urls={[
+          images.motion[1].src,
+          images.motion[1].src,
+          images.motion[1].src,
+        ]}
+      />
+      <Page
+        position={[0, -height * 0.5, 0]}
+        urls={[
+          images.motion[2].src,
+          images.motion[2].src,
+          images.motion[2].src,
+        ]}
+      />
+      <Page
+        position={[0, -height * 1, 0]}
+        urls={[
+          images.motion[3].src,
+          images.motion[3].src,
+          images.motion[3].src,
+        ]}
+      />
+      <Page
+        position={[0, -height * 1.5, 0]}
+        urls={[
+          images.motion[0].src,
+          images.motion[0].src,
+          images.motion[0].src,
+        ]}
+      />
+      <Page
+        position={[0, -height * 2, 0]}
+        urls={[
+          images.motion[3].src,
+          images.motion[3].src,
+          images.motion[3].src,
+        ]}
+      />
+    </>
+  );
+}
+
+function Loader() {
+  const progress = useProgress((state) => state.progress);
+  if (progress !== 100) {
+    return (
+      <Html center wrapperClass='loader-div'>
+        {progress.toFixed()}% loaded
+      </Html>
+    );
+  }
+
+  return null;
+}
 
 export default Motion;

@@ -24,7 +24,7 @@ function App() {
           <Route path='/graphics' element={<Graphics />} />
           <Route path='/furniture' element={<Furniture />} />
           <Route path='/3d' element={<ThreeD />} />
-          <Route path='/motion' element={<Motion />} />
+          {/* <Route path='/motion' element={<Motion />} /> */}
           <Route path='/costume' element={<Costume />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/gallery' element={<Gallery />} />

@@ -47,7 +47,8 @@ a {
   font-size: 5rem;
 
   font-family: bergen;
-  color: #424242;
+  color: magenta;
+  filter: invert(1);
 }
 
 .menu-link {
@@ -86,11 +87,13 @@ a {
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0.25;
+  opacity: 0.5;
   font-size: 5rem;
   text-align: center;
   width: 100vw;
   height: 100vh;
   z-index: -10;
   overflow: hidden;
+  color: #0e080b;
+  background-color: #ece9eb;
 }

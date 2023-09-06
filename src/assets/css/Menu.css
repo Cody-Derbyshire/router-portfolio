@@ -12,16 +12,17 @@
   backdrop-filter: blur(20px);
 }
 
-.menu-item {
-  border-top: 0.05rem solid #ece9eb;
-  background: left / 0% 100% no-repeat linear-gradient(#ece9eb, #ece9eb);
-  transition: background-size 500ms;
-  padding: 0.25rem 1rem;
+.menu-wrapper {
+  /* background-color: #ece9eb; */
+  height: 100vh;
 }
 
-.menu-item:last-child {
-  border-bottom: 0.05rem solid #ece9eb;
+.menu-item {
+  padding: 0.25rem 1rem;
+  display: flex;
+  justify-content: right;
 }
+
 .menu-item:last-child:hover::before {
   content: '←';
   font-size: 2rem;
@@ -29,12 +30,10 @@
 
 .menu-item:hover,
 .menu-item:focus {
-  background: right / 100% 100% no-repeat linear-gradient(#ece9eb, #ece9eb);
   color: #0e080b;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
-  font-family: bergen-bold;
 }
 
 .menu-item:hover::before,

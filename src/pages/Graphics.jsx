@@ -4,7 +4,6 @@ import '../assets/css/Graphics.css';
 import images from '../assets/images.json';
 import Transitions from '../components/Transitions';
 
-import 'yet-another-react-lightbox/styles.css';
 import * as THREE from 'three';
 import { Suspense, useRef } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
@@ -64,6 +63,7 @@ function Image(props) {
   const group = useRef();
   const data = useScroll();
   useFrame((state, delta) => {
+    state.gl.setClearColor('#d8d7d7');
     group.current.position.z = THREE.MathUtils.damp(
       group.current.position.z,
       Math.max(0, data.delta * 50),

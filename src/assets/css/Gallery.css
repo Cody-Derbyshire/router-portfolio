@@ -7,16 +7,27 @@
   position: absolute;
   z-index: 10;
   right: 0;
+  width: 15rem;
   text-align: right;
   padding: 0.25rem 3rem;
   backdrop-filter: invert(1);
-  mix-blend-mode: difference;
+}
+
+.wide {
+  width: 20rem;
+}
+
+.center-float {
+  top: 50%;
+  left: 50%;
+  width: 20rem;
+  transform: translate(-50%, -50%);
 }
 
 .float-no-invert {
   backdrop-filter: none;
   mix-blend-mode: normal;
-  color: white;
+  color: #ece9eb;
 }
 
 .back:hover {
@@ -28,7 +39,7 @@
 }
 
 .loader-div {
-  color: white;
+  color: #ece9eb;
 }
 
 @media screen and (max-width: 25rem) {

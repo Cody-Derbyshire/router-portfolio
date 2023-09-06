@@ -3,9 +3,8 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: #ece9eb;
-  background-color: #0e080b;
+  color: #0e080b;
+  background-color: #ece9eb;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -20,16 +19,4 @@ button {
   border: none;
   padding: 0.25rem 0.75rem;
   border-radius: 2rem;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #0e080b;
-    background-color: #ece9eb;
-  }
-
-  button {
-    background-color: #0e080b;
-    color: #ece9eb;
-  }
 }
