@@ -13,23 +13,3 @@
 .graphics-gallery {
   width: 100vw;
 }
-
-/* .graphics-container {
-  display: flex;
-}
-
-.graphics-img {
-  width: 90vw;
-} */
-
-/* @media screen and (min-width: 35rem) {
-  .graphics-gallery {
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .graphics-img {
-    width: 100%;
-  }
-} */

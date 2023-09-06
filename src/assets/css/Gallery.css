@@ -1,16 +1,22 @@
 .gallery-wrapper {
   height: 100vh;
   overflow: hidden;
-  cursor: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxMCIgZmlsbD0iYmxhY2siLz48L3N2Zz4='),
-    auto;
 }
 
 .float {
   position: absolute;
   z-index: 10;
-  width: 100%;
+  right: 0;
   text-align: right;
-  padding: 1rem 3rem;
+  padding: 0.25rem 3rem;
+  backdrop-filter: invert(1);
+  mix-blend-mode: difference;
+}
+
+.float-no-invert {
+  backdrop-filter: none;
+  mix-blend-mode: normal;
+  color: white;
 }
 
 .back:hover {
@@ -19,6 +25,10 @@
 
 .back:last-child:hover::before {
   content: '← ';
+}
+
+.loader-div {
+  color: white;
 }
 
 @media screen and (max-width: 25rem) {

@@ -10,7 +10,7 @@ const Gallery = () => {
     <>
       <Transitions>
         <div className='gallery-wrapper'>
-          <div id='projects' className='float'>
+          <div className='float float-no-invert'>
             <h1 className='' style={{ color: '#0e080b', border: 'none' }}>
               gallery
             </h1>
