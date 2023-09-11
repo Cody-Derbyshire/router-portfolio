@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import { useRef, useState } from 'react';
+import { Suspense, useRef, useState } from 'react';
 import { Canvas, createPortal, useFrame, useThree } from '@react-three/fiber';
 import {
   useGLTF,
@@ -11,6 +11,8 @@ import {
   MeshTransmissionMaterial,
   Text,
   useFBO,
+  useProgress,
+  Html,
 } from '@react-three/drei';
 
 import lens from '../assets/images/tFO_-lens-transformed.glb';
@@ -24,15 +26,18 @@ export default function LensAll() {
         gl={{ antialias: false }}
         camera={{ position: [0, 0, 20], fov: 17 }}
       >
-        <ScrollControls damping={0.2} maxSpeed={1} pages={3}>
-          <Lens>
-            <Scroll>
-              <Typography />
-              <Images />
-            </Scroll>
-            <Preload />
-          </Lens>
-        </ScrollControls>
+        <Loader />
+        <Suspense fallback={null}>
+          <ScrollControls damping={0.2} maxSpeed={1} pages={3}>
+            <Lens>
+              <Scroll>
+                <Typography />
+                <Images />
+              </Scroll>
+            </Lens>
+          </ScrollControls>
+          <Preload />
+        </Suspense>
       </Canvas>
     </>
   );
@@ -213,4 +218,17 @@ function Typography() {
       <Text children='work' position={[0, -height * 4.644, 6]} {...shared} />
     </>
   );
+}
+
+function Loader() {
+  const progress = useProgress((state) => state.progress);
+  if (progress !== 100) {
+    return (
+      <Html center wrapperClass='loader-div'>
+        {progress.toFixed()}% loaded
+      </Html>
+    );
+  }
+
+  return null;
 }

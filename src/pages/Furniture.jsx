@@ -71,7 +71,7 @@ function Image(props) {
     group.current.position.z = THREE.MathUtils.damp(
       group.current.position.z,
       Math.max(0, data.delta * 50),
-      4,
+      2,
       delta
     );
   });
