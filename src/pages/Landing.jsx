@@ -44,7 +44,7 @@ const Landing = () => {
               <h1 className='name'>i'm cody derbyshire.</h1>
             </Link>
             <div className='change-div'>
-              <p>i'm a pretty okay&nbsp;</p>
+              <p>i'm a passionate&nbsp;</p>
               <p className='role-text'></p>
             </div>
           </div>

@@ -58,6 +58,7 @@ a {
   margin-left: -1rem;
   background: right / 0% 100% no-repeat linear-gradient(#ece9eb, #ece9eb);
   transition: background-size 500ms;
+  margin-bottom: 10rem;
 }
 
 .menu-link:hover,
