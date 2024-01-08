@@ -56,7 +56,7 @@ const Contact = () => {
               className='contact-item'
               target='_blank'
               rel='noreferrer'
-              href={resume}
+              href='https://codyderbyshire-cv.onrender.com'
             >
               <h1 className='contact-ext-link'>resume</h1>
             </a>

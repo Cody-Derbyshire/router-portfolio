@@ -26,7 +26,7 @@ button {
   border-radius: 2rem;
 }
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   :root {
     color: #0e080b;
     background-color: #ece9eb;
@@ -36,4 +36,4 @@ button {
     background-color: #0e080b;
     color: #ece9eb;
   }
-}
+} */

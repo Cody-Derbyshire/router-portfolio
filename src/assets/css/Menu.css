@@ -46,7 +46,7 @@
   margin-bottom: 5rem;
 }
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   .menu-item {
     border-top: 0.05rem solid #0e080b;
     background: left / 0% 100% no-repeat linear-gradient(#0e080b, #0e080b);
@@ -66,4 +66,4 @@
     display: flex;
     justify-content: space-between;
   }
-}
+} */

@@ -20,6 +20,11 @@
   padding: 0.25rem 1rem;
 }
 
+.project-name {
+  color: #0e080b;
+  font-size: 1rem;
+}
+
 .projects-item:hover,
 .projects-item:focus {
   background: right / 100% 100% no-repeat linear-gradient(#ece9eb, #ece9eb);
@@ -27,6 +32,16 @@
   cursor: pointer;
   display: flex;
   justify-content: end;
+}
+
+/* .project-link-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+.project-desc {
+  font-size: 0.8rem;
 }
 
 @media screen and (min-width: 35rem) {
