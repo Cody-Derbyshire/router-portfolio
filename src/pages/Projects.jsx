@@ -69,7 +69,7 @@ const Projects = () => {
               back
             </h1>
           </div>
-          <div className='float center-float'>
+          <div className='blur float-projects center-float'>
             <div className='project-link-wrapper'>
               <a
                 className='contact-item'
@@ -124,9 +124,10 @@ const Projects = () => {
             </div>
           </div>
           <div className='scroll-wrapper'>
-            <Marquee autoFill='true' pauseOnHover='true'>
+            {/* <Marquee autoFill='true' pauseOnHover='true'>
               {Images}
-            </Marquee>
+            </Marquee> */}
+            {Images}
           </div>
         </div>
       </Transitions>

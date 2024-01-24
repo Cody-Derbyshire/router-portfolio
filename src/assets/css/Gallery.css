@@ -21,7 +21,7 @@
 .center-float {
   top: 50%;
   left: 50%;
-  width: 25rem;
+  width: 15rem;
   transform: translate(-50%, -50%);
 }
 
@@ -43,8 +43,22 @@
   color: #ece9eb;
 }
 
+h1 {
+  font-size: 1rem;
+}
+
 @media screen and (max-width: 25rem) {
   .back:last-child::before {
     content: '← ';
+  }
+}
+
+@media screen and (min-width: 30rem) {
+  .center-float {
+    width: 25rem;
+  }
+
+  h1 {
+    font-size: 2rem;
   }
 }

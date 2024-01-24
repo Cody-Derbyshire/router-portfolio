@@ -14,8 +14,8 @@ const Menu = () => {
         <div className='menu-wrapper'>
           <div
             id='menu'
-            className='float center-float'
-            style={{ color: '#0e080b', border: 'none' }}
+            className='float-projects center-float'
+            /* style={{ color: '#0e080b', border: 'none' }} */
           >
             <Link className='menu-item' to='/projects'>
               <h1>projects</h1>

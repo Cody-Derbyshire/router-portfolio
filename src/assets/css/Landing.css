@@ -1,7 +1,7 @@
 .main {
   height: 100vh;
   padding: 2rem;
-
+  background: linear-gradient(#0e080b3b, #0e080bc2);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -25,6 +25,7 @@ a {
   font-size: 3rem;
   font-family: bergen-bold;
   text-align: center;
+  color: #0e080b;
 }
 
 .change-div {

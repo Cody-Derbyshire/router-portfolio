@@ -1,9 +1,12 @@
 .image-container {
-  margin: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .scroll-img {
-  width: 15rem;
+  width: calc(100vw / 4);
   height: auto;
   image-rendering: pixelated;
 }
@@ -44,12 +47,25 @@
   font-size: 0.8rem;
 }
 
-@media screen and (min-width: 35rem) {
-  .scroll-wrapper {
-    margin-top: 5rem;
-  }
+.scroll-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
 }
 
 .ext-link:after {
   content: ' ↗';
+}
+
+.float-projects {
+  position: absolute;
+  z-index: 0;
+  right: 0;
+  width: 15rem;
+  text-align: right;
+  padding: 0.25rem 3rem;
+  backdrop-filter: blur(10px);
+  background-color: #5a5a5a7a;
 }

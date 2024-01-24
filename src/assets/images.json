@@ -3,63 +3,87 @@
     {
       "src": "https://i.ibb.co/JH0kSKS/layouts-scale1.webp",
       "width": 1000,
-      "height": 1000
+      "height": 1000,
+      "alt": "branding proposal",
+      "tag": "branding"
     },
     {
       "src": "https://i.ibb.co/W0HTQkh/layouts-scale2.webp",
       "width": 1000,
-      "height": 1000
+      "height": 1000,
+      "alt": "branding proposal",
+      "tag": "branding"
     },
     {
       "src": "https://i.ibb.co/mDstTxv/layouts-personalbrand.webp",
       "width": 1000,
-      "height": 1000
+      "height": 1000,
+      "alt": "personal branding",
+      "tag": "branding"
     },
 
     {
       "src": "https://i.ibb.co/vJVZMnv/flammenzauber-brand-identity-colours.png",
       "width": 1000,
-      "height": 1000
+      "height": 1000,
+      "alt": "brand design",
+      "tag": "branding"
     },
     {
       "src": "https://i.ibb.co/0cMpwQd/green-grove-branding-mockup.png",
       "width": 1000,
-      "height": 1000
+      "height": 1000,
+      "alt": "brand design",
+      "tag": "packaging"
     },
     {
       "src": "https://i.ibb.co/F3JsxnG/green-grove-branding-colours.png",
       "width": 1000,
-      "height": 1000
+      "height": 1000,
+      "alt": "brand design",
+      "tag": "branding"
     },
     {
       "src": "https://i.ibb.co/NY5LsXy/layouts-eptgraphics.webp",
       "width": 1000,
-      "height": 1000
+      "height": 1000,
+      "alt": "production design",
+      "tag": "production"
     },
     {
       "src": "https://i.ibb.co/LkPRJsS/layouts-eva.webp",
       "width": 1000,
-      "height": 1000
+      "height": 1000,
+      "alt": "client branding",
+      "tag": "print"
     },
     {
       "src": "https://i.ibb.co/sgzJLYz/layouts-fwd.webp",
       "width": 1000,
-      "height": 1000
+      "height": 1000,
+      "alt": "web design",
+      "tag": "web"
     },
     {
       "src": "https://i.ibb.co/KKPQ6k7/layouts-grace.webp",
       "width": 1000,
-      "height": 1000
+      "height": 1000,
+      "alt": "client branding",
+      "tag": "print"
     },
     {
       "src": "https://i.ibb.co/L6KXd3W/layouts-wedding.webp",
       "width": 1000,
-      "height": 1000
+      "height": 1000,
+      "alt": "wedding branding",
+      "tag": "print"
     },
     {
       "src": "https://i.ibb.co/ccCP6Z4/layouts-manifest.webp",
       "width": 1000,
-      "height": 1000
+      "height": 1000,
+      "alt": "exhibition marketing",
+      "tag": "print"
     }
   ],
   "furniture": [
